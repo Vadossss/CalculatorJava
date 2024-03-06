@@ -1,0 +1,14 @@
+
+~
+java:S1319"aThe type of "dict" should be an interface such as "Map" rather than the implementation "HashMap".(‹„¶Â8ÈÀ¥óà1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹„¶Â8ÉÀ¥óà1
+r	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ê¼Õşÿÿÿÿ8ÉÀ¥óà1
+7
+java:S1220""Move this file to a named package.8ÉÀ¥óà1
+G	java:S106"+Replace this use of System.out by a logger.(­ÏŸã8ÈÁ¥óà1
+L	java:S106"+Replace this use of System.out by a logger.(Ô£Ããùÿÿÿÿ8ë†§›á1
+G	java:S106$"+Replace this use of System.out by a logger.(­ÏŸã8ì†§›á1
+G	java:S106+"+Replace this use of System.out by a logger.(Ñäêÿ8í†§›á1
+L	java:S106B"+Replace this use of System.out by a logger.(¸šñÙüÿÿÿÿ8î†§›á1
+G	java:S106C"+Replace this use of System.out by a logger.(Çß«¢8î†§›á1
+G	java:S106G"+Replace this use of System.out by a logger.(Ô÷ÿâ8ì÷¾›á1
