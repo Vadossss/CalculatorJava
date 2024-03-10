@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
-public class oct extends SystemNum{
+public class Dec extends SystemNum {
+
     private final int a;
     private final int b;
     private final String operator;
-    public oct() {
+    public Dec() {
         a = inputNum();
         operator = inputOper();
         b = inputNum();
-        calculationValues(a, b, operator);
+        calculationValues();
     }
     public int inputNum() {
         int number;
@@ -16,9 +17,10 @@ public class oct extends SystemNum{
         System.out.println("Введите число: ");
         while (true) {
             String input = scanner.nextLine();
-            if (input.matches("[0-7]+")) { // Проверка, что введены только цифры
+
+            if (input.matches("\\d+")) {
                 try {
-                    number = Integer.parseInt(input, 8);
+                    number = Integer.parseInt(input, 10);
                     break;
                 }
                 catch (Exception e) {
@@ -30,25 +32,9 @@ public class oct extends SystemNum{
         }
         return number;
     }
-    public String inputOper() {
-        String operator;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите математический оператор: ");
-        while (true) {
-            operator = scanner.nextLine();
-            if (operator.matches("[+\\-*/]")) {
-                break;
-            } else {
-                System.out.println("Неверный ввод. Пожалуйста, введите один из следующих символов: +, -, *, /");
-            }
-        }
-        return operator;
-    }
     @Override
-    public void calculationValues(int a, int b, String operator) {
-        long result = 0;
-//        int a1 = Integer.parseInt(a, 8);
-//        int b1 = Integer.parseInt(b, 8);
+    public void calculationValues() {
+        long result = 0L;
 
         if (operator.equals("/") && b == 0) {
             setResult("Деление на ноль невозможно");
@@ -71,6 +57,6 @@ public class oct extends SystemNum{
             default:
                 break;
         }
-        setResult(Long.toOctalString(result));
+        setResult(Long.toString(result));
     }
 }

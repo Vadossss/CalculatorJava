@@ -2,9 +2,7 @@ import java.util.Scanner;
 
 public abstract class SystemNum {
     private String result;
-//    public SystemNum() {
 
-//    }
     public String getResult() {
         return result;
     }
@@ -18,7 +16,7 @@ public abstract class SystemNum {
             if (operator.matches("[+\\-*/]")) {
                 break;
             } else {
-                System.out.println("Неверный ввод. Пожалуйста, введите один из следующих символов: +, -, *, /");
+                System.out.println("Неверный ввод. Пожалуйста, введите один из следующих операторов: +, -, *, /");
             }
         }
         return operator;
@@ -27,5 +25,5 @@ public abstract class SystemNum {
         this.result = result;
     }
 
-    public abstract void calculationValues(int a, int b, String operator);
+    public abstract void calculationValues();
 }

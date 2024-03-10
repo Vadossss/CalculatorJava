@@ -2,13 +2,3 @@
 n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(†»¾öùÿÿÿÿ8»¹­óà1
 7
 java:S1220""Move this file to a named package.8â»¡ïà1
-G	java:S106"+Replace this use of System.out by a logger.(°‚ˆÍ8È¹­óà1
-F	java:S106"+Replace this use of System.out by a logger.(¥Üˆ&8Ë¹­óà1
-L	java:S106"+Replace this use of System.out by a logger.( ˜í†ûÿÿÿÿ8Ì¹­óà1
-V
-java:S1161!":Add the "@Override" annotation above this method signature(ÆÚû38Ê¹­óà1
-]
-java:S1117"";Rename "operator" which hides the field declared at line 6.(ĞÉÇàÿÿÿÿÿ8Ë¹­óà1
-F	java:S106$"+Replace this use of System.out by a logger.(Úà8øĞÁ›á1
-L	java:S106*"+Replace this use of System.out by a logger.(œÊ¼şÿÿÿÿÿ8‰ŒÅœá1
-]	java:S1252"<This block of commented-out lines of code should be removed.(Å‘Ûøÿÿÿÿ8×éÂœá1

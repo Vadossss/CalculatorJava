@@ -1,15 +1,14 @@
 import java.util.Scanner;
 
-public class dec extends SystemNum {
-
+public class Oct extends SystemNum{
     private final int a;
     private final int b;
     private final String operator;
-    public dec() {
+    public Oct() {
         a = inputNum();
         operator = inputOper();
         b = inputNum();
-        calculationValues(a, b, operator);
+        calculationValues();
     }
     public int inputNum() {
         int number;
@@ -17,10 +16,9 @@ public class dec extends SystemNum {
         System.out.println("Введите число: ");
         while (true) {
             String input = scanner.nextLine();
-
-            if (input.matches("\\d+")) { // Проверка, что введены только цифры
+            if (input.matches("[0-7]+")) { // Проверка, что введены только цифры
                 try {
-                    number = Integer.parseInt(input, 10);
+                    number = Integer.parseInt(input, 8);
                     break;
                 }
                 catch (Exception e) {
@@ -32,11 +30,9 @@ public class dec extends SystemNum {
         }
         return number;
     }
-//    @Override
-    public void calculationValues(int a, int b, String operator) {
-        long result = 0L;
-//        int a1 = Integer.parseInt(a, 10);
-//        int b1 = Integer.parseInt(b, 10);
+    @Override
+    public void calculationValues() {
+        long result = 0;
 
         if (operator.equals("/") && b == 0) {
             setResult("Деление на ноль невозможно");
@@ -59,6 +55,6 @@ public class dec extends SystemNum {
             default:
                 break;
         }
-        setResult(Long.toString(result));
+        setResult(Long.toOctalString(result));
     }
 }

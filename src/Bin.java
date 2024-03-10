@@ -1,16 +1,15 @@
-import java.util.Iterator;
 import java.util.Scanner;
 
-public class bin extends SystemNum {
+public class Bin extends SystemNum {
 
     private final int a;
     private final int b;
     private final String operator;
-    public bin() {
+    public Bin() {
         a = inputNum();
         operator = inputOper();
         b = inputNum();
-        calculationValues(a, b, operator);
+        calculationValues();
     }
     public int inputNum() {
         int number;
@@ -33,7 +32,7 @@ public class bin extends SystemNum {
         return number;
     }
     @Override
-    public void calculationValues(int a, int b, String operator) {
+    public void calculationValues() {
         long result = 0;
 
         if (operator.equals("/") && b == 0) {

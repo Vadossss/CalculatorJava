@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class hex extends SystemNum {
+public class Hex extends SystemNum {
     private final int a;
     private final int b;
     private final String operator;
-    public hex() {
+    public Hex() {
         a = inputNum();
         operator = inputOper();
         b = inputNum();
-        calculationValues(a, b, operator);
+        calculationValues();
     }
     public int inputNum() {
         int number;
@@ -31,7 +31,7 @@ public class hex extends SystemNum {
         return number;
     }
     @Override
-    public void calculationValues(int a, int b, String operator) {
+    public void calculationValues() {
         long result = 0;
 
         if (operator.equals("/") && b == 0) {
