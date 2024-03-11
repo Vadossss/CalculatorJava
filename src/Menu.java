@@ -40,29 +40,22 @@ public class Menu {
         }
 
         System.out.println("Выбрана " + dict.get(num) + " система счисления");
-
         while (true) {
-            String res = "";
             switch (num) {
                 case 1:
                     Hex hex = new Hex();
-                    res = hex.getResult();
                     break;
                 case 2:
                     Dec dec = new Dec();
-                    res = dec.getResult();
                     break;
                 case 3:
                     Oct oct = new Oct();
-                    res = oct.getResult();
                     break;
                 case 4:
                     Bin bin = new Bin();
-                    res = bin.getResult();
                     break;
                 default: break;
             }
-            System.out.println(res);
             System.out.println("Продолжить?");
             Scanner s = new Scanner(System.in);
             String key = s.nextLine();

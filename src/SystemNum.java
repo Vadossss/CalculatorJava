@@ -1,14 +1,20 @@
 import java.util.Scanner;
 
 public abstract class SystemNum {
-    private String result;
+    private Long result;
+    private final int a;
+    private final int b;
+    private String operator;
 
-    public String getResult() {
-        return result;
+    protected SystemNum() {
+        a = inputNum();
+        inputOper();
+        b = inputNum();
+        calculationValues();
     }
 
-    public String inputOper() {
-        String operator;
+
+    public void inputOper() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите математический оператор: ");
         while (true) {
@@ -19,11 +25,45 @@ public abstract class SystemNum {
                 System.out.println("Неверный ввод. Пожалуйста, введите один из следующих операторов: +, -, *, /");
             }
         }
-        return operator;
     }
-    public void setResult(String result) {
-        this.result = result;
+    public abstract int inputNum();
+
+    public void calculationValues() {
+
+//        if (operator.equals("/") && b == 0) {
+//            setResult("Деление на ноль невозможно");
+//            return;
+//        }
+        try {
+            switch (operator) {
+                case "+":
+                    result = (long) a + (long) b;
+                    break;
+                case "-":
+                    result = (long) a - (long) b;
+                    break;
+                case "/":
+                    result = (long) a / (long) b;
+                    break;
+                case "*":
+                    result = (long) a * (long) b;
+                    break;
+                default:
+                    break;
+            }
+            printResult();
+        }
+        catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+
+    }
+    protected void printResult() {
+        System.out.println("Результат:");
+        System.out.println("HEX\t" + (Long.toHexString(result)));
+        System.out.println("DEC\t" + (result));
+        System.out.println("OCT\t" + (Long.toOctalString(result)));
+        System.out.println("BIN\t" + (Long.toBinaryString(result)));
     }
 
-    public abstract void calculationValues();
 }

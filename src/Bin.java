@@ -1,16 +1,10 @@
 import java.util.Scanner;
 
 public class Bin extends SystemNum {
-
-    private final int a;
-    private final int b;
-    private final String operator;
     public Bin() {
-        a = inputNum();
-        operator = inputOper();
-        b = inputNum();
-        calculationValues();
+        super();
     }
+
     public int inputNum() {
         int number;
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +17,7 @@ public class Bin extends SystemNum {
                     break;
                 }
                 catch (Exception e) {
-                    System.out.println("Слишком большое число, введите значение заново");
+                    System.err.println("Слишком большое число, введите значение заново");
                 }
             } else {
                 System.out.println("Неверный ввод. Пожалуйста, введите только цифры.");
@@ -31,30 +25,30 @@ public class Bin extends SystemNum {
         }
         return number;
     }
-    @Override
-    public void calculationValues() {
-        long result = 0;
-
-        if (operator.equals("/") && b == 0) {
-            setResult("Деление на ноль невозможно");
-            return;
-        }
-        switch (operator) {
-            case "+":
-                result = (long)a + (long)b;
-                break;
-            case "-":
-                result = (long)a - (long)b;
-                break;
-            case "/":
-                result = (long)a / (long)b;
-                break;
-            case "*":
-                result = (long)a * (long)b;
-                break;
-            default:
-                break;
-        }
-        setResult(Long.toBinaryString(result));
-    }
+//    @Override
+//    public void calculationValues() {
+//        long result = 0;
+//
+//        if (operator.equals("/") && b == 0) {
+//            setResult("Деление на ноль невозможно");
+//            return;
+//        }
+//        switch (operator) {
+//            case "+":
+//                result = (long)a + (long)b;
+//                break;
+//            case "-":
+//                result = (long)a - (long)b;
+//                break;
+//            case "/":
+//                result = (long)a / (long)b;
+//                break;
+//            case "*":
+//                result = (long)a * (long)b;
+//                break;
+//            default:
+//                break;
+//        }
+//        setResult(Long.toBinaryString(result));
+//    }
 }

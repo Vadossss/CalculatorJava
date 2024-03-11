@@ -1,14 +1,8 @@
 import java.util.Scanner;
 
 public class Oct extends SystemNum{
-    private final int a;
-    private final int b;
-    private final String operator;
     public Oct() {
-        a = inputNum();
-        operator = inputOper();
-        b = inputNum();
-        calculationValues();
+        super();
     }
     public int inputNum() {
         int number;
@@ -30,31 +24,31 @@ public class Oct extends SystemNum{
         }
         return number;
     }
-    @Override
-    public void calculationValues() {
-        long result = 0;
-
-        if (operator.equals("/") && b == 0) {
-            setResult("Деление на ноль невозможно");
-            return;
-        }
-
-        switch (operator) {
-            case "+":
-                result = (long)a + (long)b;
-                break;
-            case "-":
-                result = (long)a - (long)b;
-                break;
-            case "/":
-                result = (long)a / (long)b;
-                break;
-            case "*":
-                result = (long)a * (long)b;
-                break;
-            default:
-                break;
-        }
-        setResult(Long.toOctalString(result));
-    }
+//    @Override
+//    public void calculationValues() {
+//        long result = 0;
+//
+//        if (operator.equals("/") && b == 0) {
+//            setResult("Деление на ноль невозможно");
+//            return;
+//        }
+//
+//        switch (operator) {
+//            case "+":
+//                result = (long)a + (long)b;
+//                break;
+//            case "-":
+//                result = (long)a - (long)b;
+//                break;
+//            case "/":
+//                result = (long)a / (long)b;
+//                break;
+//            case "*":
+//                result = (long)a * (long)b;
+//                break;
+//            default:
+//                break;
+//        }
+//        setResult(Long.toOctalString(result));
+//    }
 }
