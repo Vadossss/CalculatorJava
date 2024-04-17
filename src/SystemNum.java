@@ -29,11 +29,6 @@ public abstract class SystemNum {
     public abstract int inputNum();
 
     public void calculationValues() {
-
-//        if (operator.equals("/") && b == 0) {
-//            setResult("Деление на ноль невозможно");
-//            return;
-//        }
         try {
             switch (operator) {
                 case "+":

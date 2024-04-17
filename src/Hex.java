@@ -24,31 +24,4 @@ public class Hex extends SystemNum {
         }
         return number;
     }
-//    @Override
-//    public void calculationValues() {
-//        long result = 0;
-//
-//        if (operator.equals("/") && b == 0) {
-//            setResult("Деление на ноль невозможно");
-//            return;
-//        }
-//
-//        switch (operator) {
-//            case "+":
-//                result = (long)a + (long)b;
-//                break;
-//            case "-":
-//                result = (long)a - (long)b;
-//                break;
-//            case "/":
-//                result = (long)a / (long)b;
-//                break;
-//            case "*":
-//                result = (long)a * (long)b;
-//                break;
-//            default:
-//                break;
-//        }
-//        setResult(Long.toHexString(result));
-//    }
 }
