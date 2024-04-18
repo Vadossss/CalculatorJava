@@ -62,14 +62,14 @@ public class Menu {
                     break;
                 default: break;
             }
-            System.out.println("Продолжить? (y/n)");
+            System.out.println("\nПродолжить? (y/n)");
             Scanner s = new Scanner(System.in);
             String key = s.nextLine();
             if (key.equalsIgnoreCase("n") || key.equalsIgnoreCase("exit") || key.equalsIgnoreCase("no")) {
                 System.out.println("Завершение работы");
                 break;
             }
-            System.out.println("Вы хотите изменить систему счисления? (y/n)");
+            System.out.println("\nВы хотите изменить систему счисления? (y/n)");
             String ans = s.nextLine();
             if (ans.equalsIgnoreCase("y")) {
                 num = numSystem();
