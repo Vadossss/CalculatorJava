@@ -11,12 +11,16 @@ public class Hex extends SystemNum {
         while (true) {
             String input = scanner.nextLine();
             if (input.matches("[0-9A-Fa-f]+")) { // Проверка, что введены только цифры
-                try {
-                    number = Integer.parseInt(input, 16);
-                    break;
+                if (input.length() > 1 && input.charAt(0) == '0') {
+                    System.out.println("Неверное значение. Убери 0 в начале.");
                 }
-                catch (Exception e) {
-                    System.out.println("Слишком большое число, введите значение заново");
+                else {
+                    try {
+                        number = Integer.parseInt(input, 16);
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("Слишком большое число, введите значение заново");
+                    }
                 }
             } else {
                 System.out.println("Неверный ввод. Пожалуйста, введите только цифры.");
